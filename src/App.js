@@ -4,13 +4,13 @@ import { Header } from "./components/Header";
 import { Home } from "./Home";
 import { Footer } from "./components/footer";
 import { FifteenLacks  } from "./buyButton/Fiveteen_Lacks";
-import { TenLack  } from "./buyButton/Ten_Lack";
+import { TenLacks  } from "./buyButton/TenLack";
 import { TwentyLacks } from "./buyButton/Twenty_Lacks";
 import { FiftyLacks } from "./buyButton/Fifty_Lack";
 import { FourtyLacks } from "./buyButton/FourtyLacks";
 import { OneCrore } from "./buyButton/OneCrore";
-import { SixtyLack } from "./buyButton/Sixty_Lacks";
-import { SeventyLacks } from "./buyButton/Seventy_Lacks";
+import { SixtyLack } from "./buyButton/SixtyLacks";
+import { SeventyLacks } from "./buyButton/SeventyLacks";
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/trueIgTech_15_weekly_lottery" element={<FifteenLacks  />} />
-        <Route path="/trueIgTech_10_weekly_lottery" element={<TenLack  />} />
+        <Route path="/trueIgTech_10_weekly_lottery" element={<TenLacks  />} />
         <Route path="/trueIgTech_21_weekly_lottery" element={<TwentyLacks />} />
         <Route path="/trueIgTech_50_weekly_lottery" element={<FiftyLacks />} />
         <Route path="/trueIgTech_40_weekly_lottery" element={<FourtyLacks />} />

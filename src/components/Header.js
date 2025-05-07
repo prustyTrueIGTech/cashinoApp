@@ -32,7 +32,7 @@ export const Header = () => {
           <div className="flex items-center space-x-1">
             <a href="/logIn" className="text-black">Log In</a>
             <span>/</span>
-            <a href="#" className="text-black">Register</a>
+            <a href="/register" className="text-black">Register</a>
           </div>
           <a href="/signUp" className="relative flex items-center space-x-1">
             <ShoppingCart className="text-red-800" size={20} />

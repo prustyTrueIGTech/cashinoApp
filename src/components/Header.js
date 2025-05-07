@@ -13,28 +13,28 @@ export const Header = () => {
       {/* Nav Links */}
       <nav>
         <div className="flex items-center gap-6 text-sm font-medium text-black">
-          <a href="#" className="flex items-center space-x-1">
+          <a href="/" className="flex items-center space-x-1">
             <Home className="text-red-800" size={18} />
             <span>Home</span>
           </a>
-          <a href="#" className="flex items-center space-x-1">
+          <a href="/lotteries" className="flex items-center space-x-1">
             <Ticket className="text-red-800" size={18} />
             <span>Lotteries</span>
           </a>
-          <a href="#" className="flex items-center space-x-1">
+          <a href="/results" className="flex items-center space-x-1">
             <FileText className="text-red-800" size={18} />
             <span>Results</span>
           </a>
-          <a href="#" className="flex items-center space-x-1">
+          <a href="/winners" className="flex items-center space-x-1">
             <Trophy className="text-red-800" size={18} />
             <span>Winners</span>
           </a>
           <div className="flex items-center space-x-1">
-            <a href="#" className="text-black">Log In</a>
+            <a href="/logIn" className="text-black">Log In</a>
             <span>/</span>
             <a href="#" className="text-black">Register</a>
           </div>
-          <a href="#" className="relative flex items-center space-x-1">
+          <a href="/signUp" className="relative flex items-center space-x-1">
             <ShoppingCart className="text-red-800" size={20} />
             <span>Cart</span>
             <span className="absolute top-[-10px] left-4 bg-slate-800 text-white text-xs px-1 rounded-full">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import arrow from "../assets/png/arrow.png"; // Adjust the path
 
-export const Upcoming_Attraction = () => {
+export const UpcomingAttraction = () => {
   const [flipped, setFlipped] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

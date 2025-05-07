@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import thirtyLacks from "../assets/png/girl8.png"; // Image import
 import {
   addTicket,
-  removeAllLP,
+  
   removeALP,
-  removeTicket,
+ 
 } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 

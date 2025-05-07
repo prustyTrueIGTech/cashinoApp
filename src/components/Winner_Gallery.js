@@ -4,7 +4,7 @@ import winner1 from "../assets/png/cashino1.png"; // Replace with real paths
 import winner2 from "../assets/png/cashino1.png";
 import winner3 from "../assets/png/cashino1.png";
 
-export const Winner_Gallery = () => {
+export const WinnerGallery = () => {
 
 
   const winners = [

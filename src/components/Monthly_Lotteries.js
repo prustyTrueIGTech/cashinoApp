@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import arrow from "../assets/png/arrow.png"; // Adjust the path
 
-export const Monthly_Lotteries = () => {
+export const MonthlyLotteries = () => {
   const [flipped, setFlipped] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

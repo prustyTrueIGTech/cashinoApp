@@ -1,5 +1,4 @@
 import React from "react";
-import arrow from "../assets/png/cashino1.png"; // Your arrow/logo image
 import winner1 from "../assets/png/cashino1.png"; // Replace with real paths
 import winner2 from "../assets/png/cashino1.png";
 import winner3 from "../assets/png/cashino1.png";

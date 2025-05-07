@@ -113,12 +113,7 @@ export const FiftyLacks = () => {
   }
 
   function removeALPFromCart() {
-    dispatch(
-      removeALP({
-        type: "LP",
-        value: selectedBunch,
-      })
-    );
+    dispatch(removeALP(selectedBunch)); // Pass the current selectedBunch (lpValue)
   }
 
   useEffect(() => {
@@ -170,7 +165,6 @@ export const FiftyLacks = () => {
                 <span>
                   Draw Date : <strong>06/05/2025</strong>
                 </span>
-                <span>|</span>
                 <span>
                   Draw Time : <strong>8:30 PM</strong>
                 </span>
@@ -182,28 +176,32 @@ export const FiftyLacks = () => {
             </button>
           </div>
 
-          {/* Bunch Selector */}
           <div className="mb-4">
-            <h2 className="text-md font-semibold mb-2">Select Bunch</h2>
-            <div className="flex gap-3">
-              {[1, 5].map((bunch) => (
-                <button
-                  key={bunch}
-                  className={`w-16 py-2 rounded-full ${
-                    selectedBunch === bunch
-                      ? "bg-black text-white"
-                      : "border border-gray-400"
-                  }`}
-                  onClick={() => {
-                    setSelectedBunch(bunch);
-                    setVisibleCount(15);
-                  }}
-                >
-                  {bunch}
-                </button>
-              ))}
-            </div>
-          </div>
+  <h2 className="text-md font-semibold mb-2">Select Bunch</h2>
+  <div className="flex gap-3">
+    {[1, 5].map((bunch) => (
+      <button
+        key={bunch}
+        className={`w-16 py-2 rounded-full ${
+          selectedBunch === bunch
+            ? "bg-black text-white"
+            : "border border-gray-400"
+        }`}
+        onClick={() => {
+          setSelectedBunch(bunch);
+          setVisibleCount(15);
+
+          // 🔧 Fix: Reset LP value and click state on bunch change
+          setLpValue(0);
+          setIsLpClicked(false);
+        }}
+      >
+        {bunch}
+      </button>
+    ))}
+  </div>
+</div>
+
 
           {/* Add LP */}
           <div className="mb-6">
@@ -227,15 +225,16 @@ export const FiftyLacks = () => {
                   <button
                     className="bg-red-700 rounded-l-full px-2 text-white hover:bg-black"
                     onClick={() => {
-                      setLpValue(lpValue - 1);
                       if (lpValue === 1) {
                         setIsLpClicked(false);
                       }
+                      setLpValue((prev) => Math.max(prev - 1, 0));
                       removeALPFromCart();
                     }}
                   >
                     -
                   </button>
+
                   {lpValue}
                   <button
                     className="bg-red-700 rounded-r-full px-2 text-white hover:bg-black"
@@ -384,6 +383,8 @@ export const FiftyLacks = () => {
                   >
                     SubTotal
                   </td>
+                  <td />
+                  <td />
                   <td className="font-bold py-2 text-sm sm:text-base">
                     ₹{totalAmount()}
                   </td>

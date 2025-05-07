@@ -1,54 +1,46 @@
-import { createSlice } from '@reduxjs/toolkit';
+// src/redux/ticketSlice.js
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  selectedTickets: [],
+};
 
 const ticketSlice = createSlice({
-  name: 'ticket',
-  initialState: {
-    selectedTickets: [],
-    isAddingLP: false,
-  },
+  name: "ticket",
+  initialState,
   reducers: {
-    toggleAddLP: (state) => {
-      state.isAddingLP = !state.isAddingLP;
-    },
     addTicket: (state, action) => {
-      if (!state.selectedTickets.includes(action.payload)) {
-        state.selectedTickets.push(action.payload);
-        console.log('ticket added', [...state.selectedTickets])
+      state.selectedTickets.push(action.payload);
+    },
+    removeALP: (state, action) => {
+      const bunchToRemove = action.payload;
+
+      // Find the first matching LP entry to remove
+      const index = state.selectedTickets.findIndex(
+        (item) => item.type === "LP" && item.value === bunchToRemove
+      );
+
+      if (index !== -1) {
+        state.selectedTickets.splice(index, 1);
       }
     },
     removeTicket: (state, action) => {
+      const ticketValue = action.payload;
       state.selectedTickets = state.selectedTickets.filter(
-        (ticket) => ticket !== action.payload
+        (ticket) => ticket.type !== "ticket" || ticket.value !== ticketValue
       );
     },
-    /**
-     * {
-        type: "LP",
-        value: selectedBunch,
-      }
-     */
-    removeAllLP: (state) => {
-
-      const result = [];
-      for(let i=0;i<state.selectedTickets;i++){
-        if(state.selectedTickets[i].type !== "LP"){
-          result.push(state.selectedTickets[i]);
-        }
-      }
-      state.selectedTickets = result;
+    clearTickets: (state) => {
+      state.selectedTickets = [];
     },
-    removeALP: (state) => {
-
-      const result = [];
-      for(let i=0;i<state.selectedTickets;i++){
-        if(JSON.stringify(state.selectedTickets[i].value) !== JSON.stringify(state.payload)){
-          result.push(state.selectedTickets[i]);
-        }
-      }
-      state.selectedTickets = result;
-    }
   },
 });
 
-export const { toggleAddLP, addTicket, removeTicket, removeAllLP, removeALP } = ticketSlice.actions;
+export const {
+  addTicket,
+  removeALP,
+  removeTicket,
+  clearTickets,
+} = ticketSlice.actions;
+
 export default ticketSlice.reducer;

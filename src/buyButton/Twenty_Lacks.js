@@ -8,7 +8,7 @@ import {
 } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-export const Twenty_Lacks = () => {
+export const TwentyLacks = () => {
   const bunch1Tickets = [
     "A/01108",
     "A/01113",

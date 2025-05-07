@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import thirtyLacks from "../assets/png/girl4.png"; // Image import
+import thirtyLacks from "../assets/png/girl9.png"; // Image import
 import {
   addTicket,
   removeAllLP,

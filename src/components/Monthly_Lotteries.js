@@ -18,7 +18,7 @@ export const Monthly_Lotteries = () => {
   };
 
   const handleBuyNow = (title) => {
-    if (title === "TrueGETCH 50 Weekly") {
+    if (title === "TrueGETCH_50_Weekly") {
       navigate("/trueIgTech_50_weekly_lottery");
     } else if (title === "TrueGETCH 40 Evening") {
       navigate("/trueIgTech_40_weekly_lottery");
@@ -28,6 +28,9 @@ export const Monthly_Lotteries = () => {
     else if (title === "TrueGETCH Mega Weekly") {
       navigate("/trueIgTech_1cr_weekly_lottery");
     }
+    else if (title === "TrueGETCH_70_Weekly") {
+      navigate("/trueIgTech_70_weekly_lottery");
+    }
     else {
       navigate("/trueIgTech_1.5_weekly_lottery");
     } 
@@ -35,7 +38,7 @@ export const Monthly_Lotteries = () => {
 
   const initialCoupons = [
     {
-      title: "TrueGETCH 50 Weekly",
+      title: "TrueGETCH_50_Weekly",
       prize: "50",
       time: "8:30 PM",
       price: "50",
@@ -74,8 +77,8 @@ export const Monthly_Lotteries = () => {
       footer: "bg-red-400",
     },
     {
-      title: "TrueGETCH Prime Evening",
-      prize: "75",
+      title: "TrueGETCH_70_Weekly",
+      prize: "70",
       time: "6:00 PM",
       price: "50",
       date: "06.06.2025",

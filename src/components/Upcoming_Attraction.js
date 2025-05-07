@@ -18,8 +18,8 @@ export const Upcoming_Attraction = () => {
   };
 
   const handleBuyNow = (title) => {
-    if (title === "TrueGETCH 30 Weekly") {
-      navigate("/trueIgTech_30_weekly_lottery");
+    if (title === "TrueGETCH_15_Weekly") {
+      navigate("/trueIgTech_15_weekly_lottery");
     } else if (title === "TrueGETCH 10 Evening") {
       navigate("/trueIgTech_10_weekly_lottery");
     } else if (title === "TrueGETCH Prime Evening") {
@@ -37,7 +37,7 @@ export const Upcoming_Attraction = () => {
 
   const initialCoupons = [
     {
-      title: "TrueGETCH 30 Weekly",
+      title: "TrueGETCH_15_Weekly",
       prize: "15",
       time: "8:30 PM",
       price: "30",

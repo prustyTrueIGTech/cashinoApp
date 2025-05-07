@@ -18,15 +18,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/trueIgTech_30_weekly_lottery"
-          element={<Fiveteen_Lacks />}
-        />
+        <Route path="/trueIgTech_15_weekly_lottery" element={<Fiveteen_Lacks />} />
         <Route path="/trueIgTech_10_weekly_lottery" element={<Ten_Lack />} />
-        <Route
-          path="/trueIgTech_21_weekly_lottery"
-          element={<Twenty_Lacks />}
-        />
+        <Route path="/trueIgTech_21_weekly_lottery" element={<Twenty_Lacks />} />
         <Route path="/trueIgTech_50_weekly_lottery" element={<Fifty_Lacks />} />
         <Route path="/trueIgTech_40_weekly_lottery" element={<Fourty_Lacks />} />
         <Route path="/trueIgTech_1cr_weekly_lottery" element={<OneCrore />} />

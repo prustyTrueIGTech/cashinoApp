@@ -95,7 +95,6 @@ export const FiftyLacks = () => {
   }
 
   function addLPToCart() {
-    console.log(50 * selectedBunch);
     dispatch(
       addTicket({
         type: "LP",
@@ -114,8 +113,6 @@ export const FiftyLacks = () => {
   }
 
   function removeALPFromCart() {
-    console.log("removing from cart");
-
     dispatch(
       removeALP({
         type: "LP",
@@ -149,19 +146,19 @@ export const FiftyLacks = () => {
   const handleShowMore = () => setVisibleCount((prev) => prev + 5);
 
   return (
-    <div className="w-full mx-auto p-6 font-sans">
+    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden">
       {/* Banner */}
       <div className="mb-10 object-cover">
         <img
           src={thirtyLacks}
           alt="Thirty Lacks Banner"
-          className="w-full h-[400px] mx-auto"
+          className="w-full h-[300px] sm:h-[400px] mx-auto"
         />
       </div>
 
-      <div className="w-full h-full flex items-center justify-between gap-x-10">
-        {/* First Part  */}
-        <div className="w-1/2 h-1/2">
+      <div className="w-full h-full flex flex-col lg:flex-row items-center justify-between gap-x-10">
+        {/* First Part */}
+        <div className="w-full lg:w-1/2">
           {/* Header Info */}
           <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-6">
             <div>
@@ -209,7 +206,6 @@ export const FiftyLacks = () => {
           </div>
 
           {/* Add LP */}
-
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 mb-4">
               <h2 className="text-md font-semibold">Select Ticket Number</h2>
@@ -227,7 +223,7 @@ export const FiftyLacks = () => {
               )}
 
               {isLpClicked && (
-                <div className="flex gap-4 ">
+                <div className="flex gap-4">
                   <button
                     className="bg-red-700 rounded-l-full px-2 text-white hover:bg-black"
                     onClick={() => {
@@ -241,7 +237,6 @@ export const FiftyLacks = () => {
                     -
                   </button>
                   {lpValue}
-
                   <button
                     className="bg-red-700 rounded-r-full px-2 text-white hover:bg-black"
                     onClick={() => {
@@ -256,7 +251,6 @@ export const FiftyLacks = () => {
             </div>
 
             {/* Ticket Numbers */}
-
             <div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                 {tickets.slice(0, visibleCount).map((ticket, idx) => (
@@ -300,8 +294,8 @@ export const FiftyLacks = () => {
           </div>
         </div>
 
-        {/* Second Part  */}
-        <div className="w-1/2 h-1/2 top-0">
+        {/* Second Part */}
+        <div className="w-full lg:w-1/2">
           {/* Sales Closes in */}
           <div className="text-center w-full lg:w-auto">
             <p className="font-semibold text-lg">Sale closes in</p>
@@ -320,7 +314,7 @@ export const FiftyLacks = () => {
             </div>
           </div>
 
-          {/* Selected Tickets Table (Styled as per hand-drawn design) */}
+          {/* Selected Tickets Table */}
           <div className="border-2 border-black rounded-xl p-4 mt-8 w-full">
             <table className="table-auto w-full text-center border-collapse">
               <thead>

@@ -315,14 +315,20 @@ export const FiftyLacks = () => {
           </div>
 
           {/* Selected Tickets Table */}
-          <div className="border-2 border-black rounded-xl p-4 mt-8 w-full">
+          <div className="border-2 border-black rounded-xl p-4 mt-8 w-full overflow-x-auto">
             <table className="table-auto w-full text-center border-collapse">
               <thead>
                 <tr className="border-b-2 border-black">
-                  <th className="px-4 py-2 border-r border-black">Date</th>
-                  <th className="px-4 py-2 border-r border-black">Bunch</th>
-                  <th className="px-4 py-2 border-r border-black">Qty</th>
-                  <th className="px-4 py-2">Amount</th>
+                  <th className="px-2 py-2 border-r border-black text-sm sm:text-base">
+                    Date
+                  </th>
+                  <th className="px-2 py-2 border-r border-black text-sm sm:text-base">
+                    Bunch
+                  </th>
+                  <th className="px-2 py-2 border-r border-black text-sm sm:text-base">
+                    Qty
+                  </th>
+                  <th className="px-2 py-2 text-sm sm:text-base">Amount</th>
                 </tr>
               </thead>
               <tbody>
@@ -352,30 +358,35 @@ export const FiftyLacks = () => {
 
                     return Object.values(grouped).map((entry, idx) => (
                       <tr key={idx} className="border-b border-gray-400">
-                        <td className="border-r border-black py-2">
+                        <td className="border-r border-black py-2 text-sm sm:text-base">
                           {idx === 0 ? getTodaysDate() : ""}
                         </td>
-                        <td className="border-r border-black py-2 font-semibold">
+                        <td className="border-r border-black py-2 font-semibold text-sm sm:text-base">
                           {entry.label}
                         </td>
-                        <td className="border-r border-black py-2">
-                          <span className="border border-black rounded-full px-4 py-1 inline-block">
+                        <td className="border-r border-black py-2 text-sm sm:text-base">
+                          <span className="border border-black rounded-full px-2 py-1 inline-block">
                             {entry.qty}
                           </span>
                         </td>
-                        <td className="py-2 font-medium">₹{entry.amount}</td>
+                        <td className="py-2 font-medium text-sm sm:text-base">
+                          ₹{entry.amount}
+                        </td>
                       </tr>
                     ));
                   })()}
 
                 {/* SubTotal Row */}
                 <tr className="border-t-2 border-black">
-                  <td className="font-bold text-left flex justify-center items-center">
+                  <td
+                    colSpan="3"
+                    className="font-bold text-left flex justify-center items-center py-2 text-sm sm:text-base"
+                  >
                     SubTotal
                   </td>
-                  <td />
-                  <td />
-                  <td className="font-bold">₹{totalAmount()}</td>
+                  <td className="font-bold py-2 text-sm sm:text-base">
+                    ₹{totalAmount()}
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -1,11 +1,6 @@
 import React, {  useEffect, useState } from "react";
 import thirtyLacks from "../assets/png/girl1.png"; // Image import
-import {
-  addTicket,
-  
-  removeALP,
-  
-} from "../redux/ticketSlice";
+import { addTicket,removeALP} from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export const TenLacks  = () => {

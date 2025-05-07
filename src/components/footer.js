@@ -26,9 +26,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-3">Know us</h4>
             <ul className="space-y-2 text-white">
-              <li><Link to="#">About</Link></li>
-              <li><Link to="#">Terms of use</Link></li>
-              <li><Link to="#">Privacy Policy</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/terms">Terms of use</Link></li>
+              <li><Link to="/privacy_&_policy">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -36,10 +36,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-3">Govt. Policy</h4>
             <ul className="space-y-2 text-white">
-              <li><Link to="#">Lotteries (Regulation) ACT, 1998</Link></li>
-              <li><Link to="#">The Lotteries (Regulation) Rules, 2010</Link></li>
-              <li><Link to="#">Mizoram Claim Form</Link></li>
-              <li><Link to="#">Goa Claim Form</Link></li>
+              <li><Link to="/act">Lotteries (Regulation) ACT, 1998</Link></li>
+              <li><Link to="/rules">The Lotteries (Regulation) Rules, 2010</Link></li>
+              <li><Link to="/form">Mizoram Claim Form</Link></li>
+              <li><Link to="/GoaClaim">Goa Claim Form</Link></li>
             </ul>
           </div>
 
@@ -56,13 +56,13 @@ export const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-3">Social Platforms</h4>
             <ul className="space-y-2 text-white">
-              <li><Link to="#">Facebook</Link></li>
-              <li><Link to="#">Telegram</Link></li>
-              <li><Link to="#">Instagram</Link></li>
-              <li><Link to="#">Twitter</Link></li>
-              <li><Link to="#">Whatsapp</Link></li>
-              <li><Link to="#">YouTube (Goa)</Link></li>
-              <li><Link to="#">YouTube (Mizoram)</Link></li>
+              <li><Link to="/facebbok">Facebook</Link></li>
+              <li><Link to="/telegram">Telegram</Link></li>
+              <li><Link to="/instagram">Instagram</Link></li>
+              <li><Link to="/twitter">Twitter</Link></li>
+              <li><Link to="/whatsapp">Whatsapp</Link></li>
+              <li><Link to="/youtube(Goa)">YouTube (Goa)</Link></li>
+              <li><Link to="/youtube(Mizoram)">YouTube (Mizoram)</Link></li>
             </ul>
           </div>
         </div>

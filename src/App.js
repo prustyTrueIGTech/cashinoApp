@@ -3,14 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./Home";
 import { Footer } from "./components/footer";
-import { FifteenLacks  } from "./buyButton/Fiveteen_Lacks";
-import { TenLacks  } from "./buyButton/TenLack";
-import { TwentyLacks } from "./buyButton/Twenty_Lacks";
-import { FiftyLacks } from "./buyButton/Fifty_Lack";
-import { FourtyLacks } from "./buyButton/FourtyLacks";
-import { OneCrore } from "./buyButton/OneCrore";
-import { SixtyLack } from "./buyButton/SixtyLacks";
-import { SeventyLacks } from "./buyButton/SeventyLacks";
+import {FifteenLacks} from "./buyButton/Fiveteen_Lacks";
+import {TenLacks} from "./buyButton/TenLack";
+import {TwentyLacks} from "./buyButton/TwentyLacks";
+import {FiftyLacks} from "./buyButton/Fifty_Lacks";
+import {FourtyLacks} from "./buyButton/FourtyLacks";
+import {OneCrore} from "./buyButton/OneCrore";
+import {SeventyLacks} from "./buyButton/SeventyLacks";
+import {SixtyLack} from "./buyButton/SixtyLacks";
+
+
 
 const App = () => {
   return (

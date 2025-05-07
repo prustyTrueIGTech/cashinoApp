@@ -1,10 +1,6 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import thirtyLacks from "../assets/png/girl4.png"; // Image import
-import {
-  addTicket,
-  removeALP,
-  
-} from "../redux/ticketSlice";
+import { addTicket, removeALP } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export const OneCrore = () => {
@@ -380,9 +376,11 @@ export const OneCrore = () => {
 
                 {/* SubTotal Row */}
                 <tr className="border-t-2 border-black">
-                  
-                  <td className="font-bold text-left flex justify-center items-center">SubTotal</td>
-                  <td /><td />
+                  <td className="font-bold text-left flex justify-center items-center">
+                    SubTotal
+                  </td>
+                  <td />
+                  <td />
                   <td className="font-bold">₹{totalAmount()}</td>
                 </tr>
               </tbody>

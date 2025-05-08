@@ -3,6 +3,9 @@ import thirtyLacks from "../assets/png/girl4.png"; // Image import
 import { addTicket, removeALP } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import leftArrow from "../assets/png/leftArrow.png";
+import { Info_Button } from "../constants";
+import { OneCrInfo } from "../Info/OneCRInfo";
+import Dialog from "../components/ui/dialog";
 
 export const OneCrore = () => {
   const bunch1Tickets = [
@@ -58,6 +61,8 @@ export const OneCrore = () => {
     "A-E/47097",
   ];
 
+  const [isDialogOpen, setDialogOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState(null);
   const [selectedBunch, setSelectedBunch] = useState(1);
   const [bunchLpValues, setBunchLpValues] = useState({ 1: 0, 5: 0 });
   const [bunchLpClicked, setBunchLpClicked] = useState({ 1: false, 5: false });
@@ -65,8 +70,26 @@ export const OneCrore = () => {
   const tickets = selectedBunch === 1 ? bunch1Tickets : bunch5Tickets;
   const dispatch = useDispatch();
 
+  const handleButtonClick = (btn) => {
+    setActiveButton(btn);
+    setDialogOpen(true);
+  };
+
+  const handleClose = () => {
+    setDialogOpen(false);
+    setActiveButton(null);
+  };
+
+  const renderDialogContent = () => {
+    if (activeButton?.name === "Info")
+      return <OneCrInfo onClose={handleClose} />;
+    return null;
+  };
+
   const lpValue = bunchLpValues[selectedBunch] || 0;
   const isLpClicked = bunchLpClicked[selectedBunch] || false;
+
+  const infoBtn = Info_Button.find((b) => b.name === "Info");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -163,8 +186,11 @@ export const OneCrore = () => {
                 </span>
               </div>
             </div>
-            <button className="bg-red-700 text-white font-semibold py-2 px-6 text-lg rounded-full">
-              Info
+            <button
+              className={infoBtn.className}
+              onClick={() => handleButtonClick(infoBtn)}
+            >
+              {infoBtn.name}
             </button>
           </div>
 
@@ -375,6 +401,16 @@ export const OneCrore = () => {
           </div>
         </div>
       </div>
+      {isDialogOpen && (
+        <Dialog
+          isOpen={isDialogOpen}
+          onClose={handleClose}
+          width="w-[70%]" // Responsive width
+          height="h-[90%]"
+        >
+          {renderDialogContent()}
+        </Dialog>
+      )}
     </div>
   );
 };

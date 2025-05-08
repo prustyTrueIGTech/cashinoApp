@@ -1,7 +1,7 @@
 import { result_Number } from "../constants";
 import Logo from "../assets/png/logo.png";
 
-export const SixtyLacksInfo = () => {
+export const OneFiftyLacksInfo = () => {
   return (
     <div className="max-w-full sm:max-w-3xl mx-auto px-4 py-4 bg-white text-black font-sans text-sm">
       {/* Logo */}
@@ -22,10 +22,10 @@ export const SixtyLacksInfo = () => {
       </p>
 
       {/* Result Number */}
-      <div className="bg-orange-600 text-white text-center font-bold px-2 rounded-full mx-auto mb-4 w-full sm:w-3/4 h-[42px] text-[10px] md:w-1/2 h-[42px]">
+      <div className="bg-orange-600 text-white text-center flex font-bold px-2 rounded-full mx-auto mb-4 w-full sm:w-3/4 h-[42px] text-[10px] md:w-1/2 h-[42px]">
         {result_Number}
       </div>
-
+ 
       {/* Prize Table */}
       <div className="overflow-x-auto mb-8 bg-yellow-400 p-2 rounded-md">
         <table className="table-auto w-full text-xs sm:text-sm border border-gray-300 text-center border-separate">
@@ -41,7 +41,7 @@ export const SixtyLacksInfo = () => {
           <tbody className="bg-[#5c2d91] text-white font-medium">
             <tr>
               <td className="border px-2 sm:px-3 py-2">
-                1st Prize ₹70,00,000
+                1st Prize ₹150,00,000
                 <br />
                 (No. of Prizes: 01)
               </td>
@@ -52,7 +52,7 @@ export const SixtyLacksInfo = () => {
             </tr>
             <tr>
               <td className="border px-2 sm:px-3 py-2">
-                Cons. Prize ₹50,000
+                Cons. Prize ₹25,000,00
                 <br />
                 (No. of Prizes: 04)
               </td>
@@ -72,7 +72,9 @@ export const SixtyLacksInfo = () => {
               <td className="border px-2 sm:px-3 py-2">10</td>
               <td className="border px-2 sm:px-3 py-2">A-99684</td>
               <td className="border px-2 sm:px-3 py-2">-</td>
-              <td className="border px-2 sm:px-3 py-2">5 digits without series</td>
+              <td className="border px-2 sm:px-3 py-2">
+                5 digits without series
+              </td>
             </tr>
             <tr>
               <td className="border px-2 sm:px-3 py-2">
@@ -83,7 +85,9 @@ export const SixtyLacksInfo = () => {
               <td className="border px-2 sm:px-3 py-2">10</td>
               <td className="border px-2 sm:px-3 py-2">A-99684</td>
               <td className="border px-2 sm:px-3 py-2">-</td>
-              <td className="border px-2 sm:px-3 py-2">Last 4 digits without series</td>
+              <td className="border px-2 sm:px-3 py-2">
+                Last 4 digits without series
+              </td>
             </tr>
             <tr>
               <td className="border px-2 sm:px-3 py-2">
@@ -94,7 +98,9 @@ export const SixtyLacksInfo = () => {
               <td className="border px-2 sm:px-3 py-2">10</td>
               <td className="border px-2 sm:px-3 py-2">A-99684</td>
               <td className="border px-2 sm:px-3 py-2">-</td>
-              <td className="border px-2 sm:px-3 py-2">Last 4 digits without series</td>
+              <td className="border px-2 sm:px-3 py-2">
+                Last 4 digits without series
+              </td>
             </tr>
             <tr>
               <td className="border px-2 sm:px-3 py-2">
@@ -105,7 +111,9 @@ export const SixtyLacksInfo = () => {
               <td className="border px-2 sm:px-3 py-2">20</td>
               <td className="border px-2 sm:px-3 py-2">A-99684</td>
               <td className="border px-2 sm:px-3 py-2">-</td>
-              <td className="border px-2 sm:px-3 py-2">Last 4 digits without series</td>
+              <td className="border px-2 sm:px-3 py-2">
+                Last 4 digits without series
+              </td>
             </tr>
           </tbody>
         </table>
@@ -141,6 +149,7 @@ export const SixtyLacksInfo = () => {
           <li>All disputes subject to jurisdiction of Goa courts.</li>
         </ul>
       </div>
+
     </div>
   );
 };

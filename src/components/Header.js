@@ -32,15 +32,15 @@ export const Header = () => {
               <Home className="text-red-800" size={18} />
               <span>Home</span>
             </a>
-            <a href="/lotteries" className="flex items-center space-x-1">
+            <a href="/" className="flex items-center space-x-1">
               <Ticket className="text-red-800" size={18} />
               <span>Lotteries</span>
             </a>
-            <a href="/results" className="flex items-center space-x-1">
+            <a href="/" className="flex items-center space-x-1">
               <FileText className="text-red-800" size={18} />
               <span>Results</span>
             </a>
-            <a href="/winners" className="flex items-center space-x-1">
+            <a href="/" className="flex items-center space-x-1">
               <Trophy className="text-red-800" size={18} />
               <span>Winners</span>
             </a>

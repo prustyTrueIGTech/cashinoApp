@@ -1,10 +1,10 @@
-import React, {  useEffect, useState } from "react";
-import thirtyLacks from "../assets/png/girl1.png"; // Image import
-import { addTicket,removeALP} from "../redux/ticketSlice";
+import React, { useEffect, useState } from "react";
+import thirtyLacks from "../assets/png/girl10.png"; // Image import
+import { addTicket, removeALP } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import leftArrow from "../assets/png/leftArrow.png";
 
-export const TenLacks = () => {
+export const OneCroreFive = () => {
   const bunch1Tickets = [
     "A/01108",
     "A/01113",

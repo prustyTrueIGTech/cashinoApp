@@ -11,6 +11,7 @@ import {FourtyLacks} from "./buyButton/FourtyLacks";
 import {OneCrore} from "./buyButton/OneCrore";
 import {SeventyLacks} from "./buyButton/SeventyLacks";
 import {SixtyLack} from "./buyButton/SixtyLacks";
+import { OneCroreFive } from "./buyButton/OneCroreFive";
 
 
 
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/trueIgTech_1cr_weekly_lottery" element={<OneCrore />} />
         <Route path="/trueIgTech_60_weekly_lottery" element={<SixtyLack />} />
         <Route path="/trueIgTech_70_weekly_lottery" element={<SeventyLacks />} />
+        <Route path="/trueIgTech_1.5_weekly_lottery" element={<OneCroreFive />} />
       </Routes>
       <Footer />
     </>

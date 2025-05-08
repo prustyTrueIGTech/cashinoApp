@@ -21,7 +21,7 @@ export const Footer = () => {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
           {/* Know Us */}
           <div>
             <h4 className="text-xl font-semibold mb-3">Know us</h4>
@@ -33,13 +33,29 @@ export const Footer = () => {
           </div>
 
           {/* Govt. Policy */}
-          <div>
+          <div className="flex flex-col items-start">
             <h4 className="text-xl font-semibold mb-3">Govt. Policy</h4>
             <ul className="space-y-2 text-white">
-              <li><Link to="/act">Lotteries (Regulation) ACT, 1998</Link></li>
-              <li><Link to="/rules">The Lotteries (Regulation) Rules, 2010</Link></li>
-              <li><Link to="/form">Mizoram Claim Form</Link></li>
-              <li><Link to="/GoaClaim">Goa Claim Form</Link></li>
+              <li>
+                <Link to="/act" className="block">
+                  Lotteries (Regulation) ACT, 1998
+                </Link>
+              </li>
+              <li>
+                <Link to="/rules" className="block">
+                  The Lotteries (Regulation) Rules, 2010
+                </Link>
+              </li>
+              <li>
+                <Link to="/form" className="block">
+                  Mizoram Claim Form
+                </Link>
+              </li>
+              <li>
+                <Link to="/GoaClaim" className="block">
+                  Goa Claim Form
+                </Link>
+              </li>
             </ul>
           </div>
 

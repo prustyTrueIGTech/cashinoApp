@@ -3,6 +3,9 @@ import thirtyLacks from "../assets/png/girl7.png"; // Image import
 import { addTicket, removeALP } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import leftArrow from "../assets/png/leftArrow.png";
+import {SixtyLacksInfo} from "../Info/SixtyLacksInfo"
+import { Info_Button } from "../constants";
+import Dialog from "../components/ui/dialog";
 
 export const SixtyLack = () => {
   const bunch1Tickets = [
@@ -58,6 +61,8 @@ export const SixtyLack = () => {
     "A-E/47097",
   ];
 
+  const [isDialogOpen, setDialogOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState(null);
   const [selectedBunch, setSelectedBunch] = useState(1);
   const [bunchLpValues, setBunchLpValues] = useState({ 1: 0, 5: 0 });
   const [bunchLpClicked, setBunchLpClicked] = useState({ 1: false, 5: false });
@@ -76,6 +81,7 @@ export const SixtyLack = () => {
   });
 
   const selectedTickets = useSelector((state) => state.ticket.selectedTickets);
+  const infoBtn = Info_Button.find((b) => b.name === "Info");
 
   function getTodaysDate() {
     const today = new Date();
@@ -103,6 +109,21 @@ export const SixtyLack = () => {
     return selectedTickets.reduce((sum, ticket) => sum + ticket.amount, 0);
   }
 
+   const handleButtonClick = (btn) => {
+      setActiveButton(btn);
+      setDialogOpen(true);
+    };
+  
+    const handleClose = () => {
+      setDialogOpen(false);
+      setActiveButton(null);
+    };
+  
+    const renderDialogContent = () => {
+      if (activeButton?.name === "Info")
+        return <SixtyLacksInfo onClose={handleClose} />;
+      return null;
+    };
   useEffect(() => {
     const drawTime = new Date("2025-06-06T20:30:00").getTime();
     const interval = setInterval(() => {
@@ -163,8 +184,11 @@ export const SixtyLack = () => {
                 </span>
               </div>
             </div>
-            <button className="bg-red-700 text-white font-semibold py-2 px-6 text-lg rounded-full">
-              Info
+            <button
+              className={infoBtn.className}
+              onClick={() => handleButtonClick(infoBtn)}
+            >
+              {infoBtn.name}
             </button>
           </div>
 
@@ -375,6 +399,16 @@ export const SixtyLack = () => {
           </div>
         </div>
       </div>
+            {isDialogOpen && (
+              <Dialog
+                isOpen={isDialogOpen}
+                onClose={handleClose}
+                width="w-[70%]" // Responsive width
+                height="h-[90%]"
+              >
+                {renderDialogContent()}
+              </Dialog>
+            )}
     </div>
   );
 };

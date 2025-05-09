@@ -1,9 +1,31 @@
+import React from "react";
 import { result_Number } from "../constants";
 import Logo from "../assets/png/logo.png";
 
+// Main Modal Component
+export const FiftyLacksModal = ({ onClose }) => {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
+      <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-lg p-4 relative shadow-lg">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-3 text-gray-600 text-xl font-bold"
+        >
+          ×
+        </button>
+
+        {/* Modal Content */}
+        <FiftyLacksInfo />
+      </div>
+    </div>
+  );
+};
+
+// Content Component
 export const FiftyLacksInfo = () => {
   return (
-    <div className="max-w-full sm:max-w-3xl mx-auto px-4 py-4 bg-white text-black font-sans text-sm">
+    <div className="text-black font-sans text-sm">
       {/* Logo */}
       <img src={Logo} className="w-auto h-12 mx-auto mb-4" alt="Logo" />
 
@@ -22,7 +44,7 @@ export const FiftyLacksInfo = () => {
       </p>
 
       {/* Result Number */}
-      <div className="bg-orange-600 text-white text-center font-bold px-2 rounded-full mx-auto mb-4 w-full sm:w-3/4 h-[42px] text-[10px] md:w-1/2 h-[42px]">
+      <div className="bg-orange-600 text-white text-center font-bold px-2 rounded-full mx-auto mb-4 w-full sm:w-3/4 h-[42px] text-[10px] md:w-1/2">
         {result_Number}
       </div>
 
@@ -126,15 +148,11 @@ export const FiftyLacksInfo = () => {
         </h3>
         <ul className="list-disc list-inside space-y-2 text-justify text-xs sm:text-sm md:text-base">
           <li>
-            All the prizes are winning above ₹10,000/- are subject to government
+            All the prizes winning above ₹10,000/- are subject to government
             tax.
           </li>
-          <li>
-            Tickets can be bought online or from authorized resellers only.
-          </li>
-          <li>
-            Winners must claim the prize within 30 days from the draw date.
-          </li>
+          <li>Tickets can be bought online or from authorized resellers only.</li>
+          <li>Winners must claim the prize within 30 days from the draw date.</li>
           <li>
             Claim forms can be submitted online or by post to the official
             address.

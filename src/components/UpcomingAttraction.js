@@ -100,7 +100,7 @@ export const UpcomingAttraction = () => {
         <img
           src={arrow}
           alt="arrow"
-          className="w-12 h-12 me-14 cursor-pointer"
+          className="w-12 h-12 me-14 cursor-pointer "
           onClick={handleToggle}
         />
       </div>

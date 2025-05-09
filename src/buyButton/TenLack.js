@@ -1,6 +1,6 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import thirtyLacks from "../assets/png/girl1.png"; // Image import
-import { addTicket,removeALP} from "../redux/ticketSlice";
+import { addTicket, removeALP } from "../redux/ticketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import leftArrow from "../assets/png/leftArrow.png";
 
@@ -124,13 +124,13 @@ export const TenLacks = () => {
   const handleShowMore = () => setVisibleCount((prev) => prev + 5);
 
   return (
-    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden">
+    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden mt-11">
       {/* Banner */}
       <div className="mb-10 object-cover">
         <img
           src={thirtyLacks}
           alt="Thirty Lacks Banner"
-          className="w-full h-[300px] sm:h-[400px] mx-auto"
+          className="w-full h-auto sm:h-[400px] md:h-[400x] mx-auto object-cover"
         />
       </div>
 
@@ -375,9 +375,6 @@ export const TenLacks = () => {
           </div>
         </div>
       </div>
-      
-
-
     </div>
   );
 };

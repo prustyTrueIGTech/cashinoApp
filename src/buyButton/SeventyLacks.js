@@ -147,7 +147,7 @@ export const SeventyLacks = () => {
   const handleShowMore = () => setVisibleCount((prev) => prev + 5);
 
   return (
-    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden">
+    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden mt-11">
       {/* Banner */}
       <div className="mb-10 object-cover">
         <img

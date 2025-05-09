@@ -145,13 +145,13 @@ export const SixtyLack = () => {
   const handleShowMore = () => setVisibleCount((prev) => prev + 5);
 
   return (
-    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden">
+    <div className="w-full mx-auto p-6 font-sans overflow-x-hidden mt-11">
       {/* Banner */}
       <div className="mb-10 object-cover">
         <img
           src={thirtyLacks}
           alt="Thirty Lacks Banner"
-          className="w-full h-[300px] sm:h-[400px] mx-auto"
+          className="w-full h-auto sm:h-[400px] md:h-[400x] mx-auto object-cover"
         />
       </div>
 

@@ -6,7 +6,7 @@ import Logo from "../assets/png/logo.png";
 export const FiftyLacksModal = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
-      <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-lg p-4 relative shadow-lg">
+      <div className="bg-white max-w-[90vh]  max-h-[90vh] overflow-y-auto rounded-lg p-4 relative shadow-lg">
         {/* Close Button */}
         <button
           onClick={onClose}

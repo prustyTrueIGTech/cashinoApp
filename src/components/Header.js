@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Home, Ticket, FileText, Trophy, ShoppingCart, Menu } from "lucide-react";
 import logo from "../assets/png/logo.png";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,22 +37,22 @@ export const Header = () => {
               <Ticket className="text-red-800" size={18} />
               <span>Lotteries</span>
             </a>
-            <a href="/" className="flex items-center space-x-1">
+            <Link to="/" className="flex items-center space-x-1">
               <FileText className="text-red-800" size={18} />
               <span>Results</span>
-            </a>
-            <a href="/" className="flex items-center space-x-1">
+            </Link>
+            <Link to="/" className="flex items-center space-x-1">
               <Trophy className="text-red-800" size={18} />
               <span>Winners</span>
-            </a>
+            </Link>
             <div className="flex items-center space-x-1">
-              <a href="/logIn" className="text-black">
+              <Link to="/logIn" className="text-black">
                 Log In
-              </a>
+              </Link>
               <span>/</span>
-              <a href="/register" className="text-black">
+              <Link to="/register" className="text-black">
                 Register
-              </a>
+              </Link>
             </div>
             <a href="/signUp" className="relative flex items-center space-x-1">
               <ShoppingCart className="text-red-800" size={20} />

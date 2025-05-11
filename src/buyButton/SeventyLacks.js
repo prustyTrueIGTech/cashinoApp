@@ -149,11 +149,11 @@ export const SeventyLacks = () => {
   return (
     <div className="w-full mx-auto p-6 font-sans overflow-x-hidden mt-11">
       {/* Banner */}
-      <div className="mb-10 object-cover">
+      <div className="mb-10">
         <img
           src={thirtyLacks}
           alt="Thirty Lacks Banner"
-          className="w-full h-[300px] sm:h-[400px] mx-auto"
+          className="w-full h-[400px] sm:h-[560px] mx-auto object-fill"
         />
       </div>
 

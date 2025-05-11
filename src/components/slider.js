@@ -24,7 +24,7 @@ export const Slider = () => {
         <img
           src={cards[currentIndex]}
           alt={`Cartoon ${currentIndex + 1}`}
-          className="w-full h-auto object-contain"
+          className="w-full h-[580px] object-fill"
         />
       </div>
 

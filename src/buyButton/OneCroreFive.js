@@ -74,8 +74,7 @@ export const OneCroreFive = () => {
   const lpValue = bunchLpValues[selectedBunch] || 0;
   const isLpClicked = bunchLpClicked[selectedBunch] || false;
 
-  const infoBtn =  Info_Button.find((b) => b.name === "Info");
-  
+  const infoBtn = Info_Button.find((b) => b.name === "Info");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -155,7 +154,7 @@ export const OneCroreFive = () => {
         <img
           src={thirtyLacks}
           alt="Thirty Lacks Banner"
-          className="w-full h-auto sm:h-[400px] md:h-[400x] mx-auto object-cover"
+          className="w-full h-[400px] sm:h-[560px] mx-auto object-fill"
         />
       </div>
 

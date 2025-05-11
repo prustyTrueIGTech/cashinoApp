@@ -12,6 +12,8 @@ import {OneCrore} from "./buyButton/OneCrore";
 import {SeventyLacks} from "./buyButton/SeventyLacks";
 import {SixtyLack} from "./buyButton/SixtyLacks";
 import { OneCroreFive } from "./buyButton/OneCroreFive";
+import { Login } from "./components/Login";
+import { Signup } from "./components/Signup";
 
 
 
@@ -21,6 +23,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Signup />} />
         <Route path="/trueIgTech_15_weekly_lottery" element={<FifteenLacks  />} />
         <Route path="/trueIgTech_10_weekly_lottery" element={<TenLacks  />} />
         <Route path="/trueIgTech_21_weekly_lottery" element={<TwentyLacks />} />
